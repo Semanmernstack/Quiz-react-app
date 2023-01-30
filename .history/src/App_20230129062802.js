@@ -4,12 +4,11 @@ import Quiz from "./components/Quiz";
 import End from "./components/End"
 import { QuizContext } from "./Game/Context";
 function App() {
-  const [game, setGame] = useState("menu")
-  const [score, setScore] = useState(0)
+  const [game, setGame] = useState("menuu")
   return (
-    <div className="text-center items-center justify-center flex  flex-col  max-w-6xl mx-auto h-screen  bg-pink-300 first-letter:">
-      <p className="text-2xl font-extrabold font-serif">Trences Quiz App</p>
-      <QuizContext.Provider value={{game, setGame, score, setScore}}>
+    <div className="App">
+      <p className="">Trences Quiz App</p>
+      <QuizContext.Provider value={{game, setGame}}  >
         {game === "menu" && <Menu/>}
         {game === "quiz" && <Quiz/>}
         {game === "End" && <End/>}
